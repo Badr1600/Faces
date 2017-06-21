@@ -1,0 +1,67 @@
+<!-- Copyright (c) Microsoft. All rights reserved. -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.microsoft.projectoxford.face.samples.ui.DetectionActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/view_margin">
+
+
+        <ImageView
+            android:id="@id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E0E0E0"
+            android:contentDescription="@string/detection" />
+
+        <Button
+            android:id="@+id/select_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_image"
+            android:onClick="selectImage"
+            style="@style/ButtonStyle" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/detect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/view_margin"
+            android:layout_marginEnd="@dimen/view_margin"
+            android:text="@string/detect"
+            android:onClick="detect"
+            style="@style/ButtonStyle" />
+
+        <Button
+            android:id="@+id/details"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/view_margin"
+            android:layout_marginEnd="@dimen/view_margin"
+            android:text="Details"
+            android:onClick="details"
+            style="@style/ButtonStyle" />
+
+    </LinearLayout>
+
+</RelativeLayout>
